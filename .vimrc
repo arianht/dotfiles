@@ -1,6 +1,10 @@
 set nocompatible
 
-imap jj <ESC> 
+imap jj <ESC>
+
+nmap <C-s> :w<CR>
+vmap <C-s> <ESC><C-s>gv
+imap <C-s> <ESC><C-s>
 
 " Remove trailing whitespaces on :w
 autocmd BufWritePre * :%s/\s\+$//e
@@ -14,6 +18,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
+Bundle 'jiangmiao/auto-pairs'
 
 filetype plugin indent on
 
@@ -28,7 +33,8 @@ endfunc
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_register_as_syntastic_checker=0
-  
+let g:EclimCompletionMethod = 'omnifunc'
+
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
