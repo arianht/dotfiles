@@ -1,10 +1,12 @@
 set nocompatible
+colorscheme jellybeans
 
 imap jj <ESC>
 
 nmap <C-s> :w<CR>
 vmap <C-s> <ESC><C-s>gv
 imap <C-s> <ESC><C-s>
+nmap <Space> :w<CR>
 
 " Remove trailing whitespaces on :w
 autocmd BufWritePre * :%s/\s\+$//e
@@ -34,6 +36,8 @@ endfunc
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_register_as_syntastic_checker=0
 let g:EclimCompletionMethod = 'omnifunc'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 set enc=utf-8
 set fenc=utf-8
