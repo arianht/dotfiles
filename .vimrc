@@ -7,21 +7,25 @@ nmap <C-s> :w<CR>
 vmap <C-s> <ESC><C-s>gv
 imap <C-s> <ESC><C-s>
 nmap <Space> :w<CR>
+nmap <C-l> :noh<CR>
 
 " Remove trailing whitespaces on :w
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Vundle related
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'jiangmiao/auto-pairs'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'jiangmiao/auto-pairs'
+
+call vundle#end()
 filetype plugin indent on
 
 " Toggle between relative and non-relative line numbers
@@ -38,6 +42,9 @@ let g:ycm_register_as_syntastic_checker=0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 set enc=utf-8
 set fenc=utf-8
