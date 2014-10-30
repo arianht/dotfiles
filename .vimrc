@@ -12,10 +12,14 @@ nmap <leader>h :tabp<CR>
 nmap <leader>q :q<CR>
 nmap <leader>s :vsplit<CR>
 nmap <leader>a <C-w><C-w>
+nmap <C-m> :make<CR><CR><CR>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Macro repeat quickly
 nmap <leader>r @@
+
+" Copy from and paste to clipboard
+set clipboard=unnamedplus
 
 " Remove trailing whitespaces on :w
 autocmd BufWritePre * :%s/\s\+$//e
@@ -50,6 +54,7 @@ let g:ycm_register_as_syntastic_checker=0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_cpp_check_header = 1
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
