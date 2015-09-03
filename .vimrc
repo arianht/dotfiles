@@ -39,6 +39,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
