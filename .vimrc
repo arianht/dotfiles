@@ -35,13 +35,15 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'marijnh/tern_for_vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
+
+map <C-n> :NERDTreeToggle<CR>
 
 " Toggle between relative and non-relative line numbers
 function! NumberToggle()
@@ -52,8 +54,13 @@ function! NumberToggle()
   endif
 endfunc
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn\|\.git5_specs\|target',
+  \ 'file': '\.exe$\|\.so$\|\.dll$\|\.class\|\~$'
+  \ }
+
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/ycm_extra_conf.py'
-let g:ycm_register_as_syntastic_checker=0
+let g:ycm_register_as_syntastic_checker = 0
 let g:EclimCompletionMethod = 'omnifunc'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
@@ -85,6 +92,8 @@ endif
 
 set number
 set showmatch
+
+set t_Co=256
 
 set history=80
 set ruler
