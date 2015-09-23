@@ -41,6 +41,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -57,7 +59,7 @@ function! NumberToggle()
 endfunc
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn\|\.git5_specs\|target',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn\|\.git5_specs\|target\|node_modules\|build',
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.class\|\~$'
   \ }
 
@@ -67,6 +69,8 @@ let g:EclimCompletionMethod = 'omnifunc'
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_cpp_check_header = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:jsx_ext_required = 0
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
