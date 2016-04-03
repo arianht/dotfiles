@@ -43,6 +43,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
