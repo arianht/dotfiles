@@ -44,6 +44,8 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Quramy/tsuquyomi'
 
 call vundle#end()
 filetype plugin indent on
@@ -71,6 +73,7 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go']}
 let g:jsx_ext_required = 0
 
 " Allow backspacing over everything in insert mode
