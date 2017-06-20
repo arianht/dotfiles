@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-unused-vars": ["error", "all"],
+    "camelcase": [
+      "error",
+      {
+        "properties": "always"
+      }
+    ],
+    "no-underscore-dangle": ["error"]
+  }
+}
